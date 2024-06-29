@@ -7,7 +7,7 @@ def welch_t(a, b):
 
     numerator = a.mean() - b.mean()
     
-    # “ddof = Delta Degrees of Freedom”: the divisor used in the calculation is N - ddof, 
+    # "ddof = Delta Degrees of Freedom": the divisor used in the calculation is N - ddof, 
     #  where N represents the number of elements. By default ddof is zero.
     
     denominator = np.sqrt(a.var(ddof=1)/a.size + b.var(ddof=1)/b.size)
